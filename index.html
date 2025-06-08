@@ -36,6 +36,10 @@
         html {
             scroll-behavior: smooth;
         }
+        /* Ensure body takes full height for vh calculations if needed */
+        body, html {
+            height: 100%;
+        }
     </style>
 </head>
 <body class="bg-apple-light-gray font-sans text-apple-gray antialiased">
@@ -61,7 +65,7 @@
             </p>
         </div>
 
-        <div class="mt-8 md:mt-12 aspect-w-16 aspect-h-9 bg-black rounded-xl shadow-2xl overflow-hidden border border-apple-border">
+        <div class="mt-8 md:mt-12 w-full h-[65vh] md:h-[80vh] max-h-[800px] bg-black rounded-xl shadow-2xl overflow-hidden border border-apple-border">
             <iframe
                 src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
                 frameborder="0"
@@ -116,7 +120,6 @@
             <p class="mt-1">Play the best free online games.</p>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/aspect-ratio"></script>
-</body>
+    
+    </body>
 </html>
